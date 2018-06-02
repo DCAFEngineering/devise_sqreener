@@ -6,9 +6,9 @@ module Devise
       extend ActiveSupport::Concern
 
       included do
-        serialize :sqreened_email
-        serialize :current_sqreened_sign_in_ip
-        serialize :last_sqreened_sign_in_ip
+        # serialize :sqreened_email
+        # serialize :current_sqreened_sign_in_ip
+        # serialize :last_sqreened_sign_in_ip
         before_save :sqreen_email
 
         validate :sqreen_block_sign_up?, :on => :create
